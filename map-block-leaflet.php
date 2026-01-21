@@ -34,6 +34,7 @@ function map_block_leaflet_register() {
 	// Register blocks
 	register_block_type( __DIR__ . '/build/leaflet-map-block');
 	register_block_type( __DIR__ . '/build/multi-marker');
+	register_block_type( __DIR__ . '/build/multi-feature');
 }
 
 add_action('init', 'map_block_leaflet_register');

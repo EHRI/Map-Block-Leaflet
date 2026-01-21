@@ -1,0 +1,27 @@
+.editor-features-modal {
+	&__content {
+		width: 680px;
+		max-width: 100%;
+	}
+
+	&__map-preview {
+		margin-bottom: 16px;
+		height: 350px;
+	}
+
+	&__form-fields {
+		flex-grow: 1;
+	}
+
+	&__field {
+		margin-bottom: 20px;
+	}
+
+	&__field--last {
+		margin-top: 20px;
+	}
+
+	&__actions {
+		padding-top: 24px;
+	}
+}
