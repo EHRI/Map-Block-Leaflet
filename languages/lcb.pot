@@ -3,45 +3,45 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/multi-feature/components/EditorFeatures.js:143
+#: src/multi-feature/components/EditorFeatures.js:142
 msgid "Details"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:148
+#: src/multi-feature/components/EditorFeatures.js:147
 msgid "Label"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:151
+#: src/multi-feature/components/EditorFeatures.js:150
 msgid ""
 "This text will not be displayed on the web, it is to facilitate the "
 "identification of the feature."
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:157
+#: src/multi-feature/components/EditorFeatures.js:156
 msgid "Content"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:160
+#: src/multi-feature/components/EditorFeatures.js:159
 msgid "Paste GeoJSON content here (must be a valid GeoJSON object)."
 msgstr ""
 
 #: src/multi-feature/components/EditorFeatures.js:165
-msgid "Color"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:168
-msgid "Use a hex value to set the border color of the feature."
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:173
 msgid "Linked Post/Page"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:177
+#: src/multi-feature/components/EditorFeatures.js:169
 msgid "Select a post or page to display its content when the feature is clicked."
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:187
+#: src/multi-feature/components/EditorFeatures.js:176
+msgid "Color"
+msgstr ""
+
+#: src/multi-feature/components/EditorFeatures.js:177
+msgid "Choose the border and fill color for the feature."
+msgstr ""
+
+#: src/multi-feature/components/EditorFeatures.js:192
 msgid "Accept"
 msgstr ""
 

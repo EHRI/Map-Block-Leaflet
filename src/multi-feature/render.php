@@ -77,26 +77,76 @@ $features_with_content = array_map(function($feature) {
 			attribution: '<?= $attributes['themeAttribution'] ?>'
 		});
 
-		const colors = Object.fromEntries(features.map((f) => [f.label, f.color]));
-		const postContents = Object.fromEntries(
-			features
-				.filter(f => f.postContent)
-				.map((f) => [f.label, { title: f.postTitle, content: f.postContent }])
-		);
+		if (features.length === 0) {
+			console.error('No features provided to multi-feature block');
+			return;
+		}
 
-		let geoJsonFeatures = features.map(f => JSON.parse(f.content));
+		// Create lookup maps by label for color and post data
+		const colorByLabel = {};
+		const postDataByLabel = {};
+
+		features.forEach(f => {
+			colorByLabel[f.label] = f.color;
+			if (f.postContent) {
+				postDataByLabel[f.label] = {
+					title: f.postTitle,
+					content: f.postContent
+				};
+			}
+		});
+
+		// Parse GeoJSON and ensure properties._label exists for lookup
+		let geoJsonFeatures = features.map(f => {
+			const geoJson = JSON.parse(f.content);
+
+			// Add label to properties so Leaflet callbacks can access it
+			if (geoJson.type === 'FeatureCollection') {
+				// For FeatureCollections, add label to each feature's properties
+				if (geoJson.features && Array.isArray(geoJson.features)) {
+					geoJson.features.forEach(feature => {
+						if (!feature.properties) {
+							feature.properties = {};
+						}
+						feature.properties._label = f.label;
+					});
+				}
+			} else if (geoJson.type === 'Feature') {
+				// For single Features, add label to properties
+				if (!geoJson.properties) {
+					geoJson.properties = {};
+				}
+				geoJson.properties._label = f.label;
+			} else {
+				// For direct geometries (Point, Polygon, etc.), wrap in a Feature
+				const wrappedFeature = {
+					type: 'Feature',
+					geometry: geoJson,
+					properties: {
+						_label: f.label
+					}
+				};
+				return wrappedFeature;
+			}
+
+			return geoJson;
+		});
+
 		const geoJsonLayer = L.geoJSON(geoJsonFeatures, {
-			style: function (geoJson) {
+			style: function (feature) {
+				// Use label from properties for lookup
+				const label = feature.properties ? feature.properties._label : null;
+				const featureColor = label ? colorByLabel[label] : '#3388ff';
 				return {
-					color: colors[geoJson.properties.name],
+					color: featureColor,
 					weight: 1,
 					fillOpacity: 0.2,
-					fillColor: colors[geoJson.properties.name]
+					fillColor: featureColor
 				};
 			},
 			onEachFeature: function (feature, layer) {
-				const featureName = feature.properties.name;
-				const postData = postContents[featureName];
+				const label = feature.properties ? feature.properties._label : null;
+				const postData = label ? postDataByLabel[label] : null;
 
 				// Only add hover and click effects if feature has a post assigned
 				if (postData) {
@@ -140,25 +190,22 @@ $features_with_content = array_map(function($feature) {
 			}
 		});
 
-		const center = geoJsonLayer.getBounds().getCenter();
+		const bounds = geoJsonLayer.getBounds();
+		if (!bounds.isValid()) {
+			console.error('Invalid bounds for features');
+			return;
+		}
+
+		const center = bounds.getCenter();
 		const map = L.map("<?= $id ?>", {
-			minZoom: 4,
-            maxZoom: 10,
 			center: center,
-            layers: [baseLayer, geoJsonLayer],
-			zoomSnap: 0.5,  // Allows zoom in 0.5 increments
+            layers: [baseLayer, geoJsonLayer]
 		});
 		map.scrollWheelZoom.disable();
 
-		if (features.length > 0) {
-			const bounds = geoJsonLayer.getBounds();
-
-			map.fitBounds(bounds, {
-				padding: [-10,-10]
-            })
-		} else {
-			console.log("No features found")
-		}
+		map.fitBounds(bounds, {
+			padding: [50, 50]
+		});
 
 		const container = document.getElementById("<?= $id ?>");
 

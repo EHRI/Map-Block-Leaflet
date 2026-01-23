@@ -15,6 +15,12 @@
 
 	&__field {
 		margin-bottom: 20px;
+
+		// Style the color picker container
+		.components-color-picker {
+			width: 100%;
+			max-width: 300px;
+		}
 	}
 
 	&__field--last {

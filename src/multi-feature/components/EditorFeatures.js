@@ -1,6 +1,6 @@
 import {__} from "@wordpress/i18n";
 import {useState, useCallback, useMemo, useEffect} from "@wordpress/element";
-import {Button, Modal, PanelBody, PanelRow, TextareaControl, TextControl, ComboboxControl} from "@wordpress/components";
+import {Button, Modal, PanelBody, PanelRow, TextareaControl, TextControl, ComboboxControl, ColorPicker, BaseControl} from "@wordpress/components";
 import {Feature, Map} from "../../shared/components/Map";
 import apiFetch from '@wordpress/api-fetch';
 import L from 'leaflet';
@@ -139,7 +139,6 @@ const EditorFeatures = (props) => {
 					</Map>
 				</div>
 
-
 				<PanelBody title={__('Details', 'map-block-leaflet')} initialOpen={true}>
 					<PanelRow>
 						<div className="editor-features-modal__form-fields">
@@ -161,14 +160,7 @@ const EditorFeatures = (props) => {
 								/>
 							</div>
 
-							<TextControl
-								label={__('Color', 'map-block-leaflet')}
-								onChange={setColor}
-								value={color}
-								help={__('Use a hex value to set the border color of the feature.', 'map-block-leaflet')}
-							/>
-
-							<div className="editor-features-modal__field--last">
+							<div className="editor-features-modal__field">
 								<ComboboxControl
 									label={__('Linked Post/Page', 'map-block-leaflet')}
 									value={postId}
@@ -177,6 +169,19 @@ const EditorFeatures = (props) => {
 									help={__('Select a post or page to display its content when the feature is clicked.', 'map-block-leaflet')}
 									disabled={loading}
 								/>
+							</div>
+
+							<div className="editor-features-modal__field--last">
+								<BaseControl
+									label={__('Color', 'map-block-leaflet')}
+									help={__('Choose the border and fill color for the feature.', 'map-block-leaflet')}
+								>
+									<ColorPicker
+										color={color}
+										onChangeComplete={(value) => setColor(value.hex)}
+										disableAlpha
+									/>
+								</BaseControl>
 							</div>
 
 						</div>

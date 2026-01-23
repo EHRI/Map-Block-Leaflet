@@ -43,14 +43,14 @@ export const FeatureCluster = ({ features }) => {
         }
     }, [validFeatures, map]);
 
-    return validFeatures.map((props) =>
+    return validFeatures.map((props, index) =>
         <Feature
             data={props.parsedContent}
             style={(feature) => ({
                 color: props.color,
                 weight: 1,
             })}
-            key={props.label}
+            key={`${props.label}-${index}`}
         />
     );
 }
