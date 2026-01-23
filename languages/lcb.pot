@@ -3,56 +3,38 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/multi-feature/components/EditorFeatures.js:142
-msgid "Details"
+#: src/shared/providers.js:13
+msgid "WorldImagery"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:147
-msgid "Label"
+#: src/shared/providers.js:20
+msgid "Black And White"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:150
-msgid ""
-"This text will not be displayed on the web, it is to facilitate the "
-"identification of the feature."
+#: src/shared/providers.js:27
+msgid "Grayscale"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:156
-msgid "Content"
+#: src/shared/providers.js:34
+msgid "Dark Matter"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:159
-msgid "Paste GeoJSON content here (must be a valid GeoJSON object)."
+#: src/shared/providers.js:41
+msgid "Mapnik"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:165
-msgid "Linked Post/Page"
+#: src/shared/providers.js:48
+msgid "Stadia OSMBright"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:169
-msgid "Select a post or page to display its content when the feature is clicked."
+#: src/shared/providers.js:55
+msgid "Watercolor"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:176
-msgid "Color"
+#: src/shared/providers.js:6
+msgid "Voyager"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:177
-msgid "Choose the border and fill color for the feature."
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:192
-msgid "Accept"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:52
-msgid "-- None --"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:57
-msgid "--- Pages ---"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:71
-msgid "--- Posts ---"
+#: src/shared/providers.js:62
+msgid "Positron"
 msgstr ""

@@ -6,6 +6,7 @@ import drakMatter from "./images/dark-matter.png";
 import mapnik from "./images/mapnik.png";
 import watercolor from "./images/watercolor.png";
 import stadia from "./images/stadia.png";
+import positron from "./images/positron.png";
 
 const themes = [
   {
@@ -48,6 +49,11 @@ const themes = [
     name: "Watercolor",
     image: watercolor,
   },
+	{
+		id: 9,
+		name: "Positron",
+		image: positron,
+	}
 ];
 
 export default themes;

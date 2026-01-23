@@ -4,3 +4,4 @@ composer.lock
 /logs/
 .DS_Store
 *.zip
+.idea

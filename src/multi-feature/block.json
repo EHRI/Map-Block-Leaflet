@@ -46,5 +46,6 @@
     "editorStyle": "file:./index.css",
     "render": "file:./render.php",
     "style": "lib-css-map-block-leaflet",
+    "viewStyle": "file:./style-index.css",
     "viewScript": "lib-js-map-block-leaflet"
 }
