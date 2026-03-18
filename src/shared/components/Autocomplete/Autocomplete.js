@@ -126,7 +126,9 @@ const Autocomplete = props => {
 
   return (
     <div className="mbl-autocomplete" ref={refContainer}>
-      <TextControl {...inputProps} />
+      <TextControl
+          {...inputProps}
+           __next40pxDefaultSize />
 
       {loading && (
         <div className="mbl-listbox">

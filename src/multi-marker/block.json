@@ -1,6 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
-    "apiVersion": 2,
+    "apiVersion": 3,
     "name": "map-block-leaflet/map-block-leaflet-multimarker",
     "version": "3.1.0",
     "title": "Map Leaflet multimarker",

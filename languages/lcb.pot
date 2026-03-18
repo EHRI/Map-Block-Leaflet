@@ -3,38 +3,68 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/shared/providers.js:13
-msgid "WorldImagery"
+#: src/multi-feature/components/EditorFeatures.js:142
+msgid "Details"
 msgstr ""
 
-#: src/shared/providers.js:20
-msgid "Black And White"
+#: src/multi-feature/components/EditorFeatures.js:147
+msgid "Label"
 msgstr ""
 
-#: src/shared/providers.js:27
-msgid "Grayscale"
+#: src/multi-feature/components/EditorFeatures.js:150
+msgid ""
+"This text will not be displayed on the web, it is to facilitate the "
+"identification of the feature."
 msgstr ""
 
-#: src/shared/providers.js:34
-msgid "Dark Matter"
+#: src/multi-feature/components/EditorFeatures.js:158
+msgid "Content"
 msgstr ""
 
-#: src/shared/providers.js:41
-msgid "Mapnik"
+#: src/multi-feature/components/EditorFeatures.js:161
+msgid "Paste GeoJSON content here (must be a valid GeoJSON object)."
 msgstr ""
 
-#: src/shared/providers.js:48
-msgid "Stadia OSMBright"
+#: src/multi-feature/components/EditorFeatures.js:168
+msgid "Linked Post/Page"
 msgstr ""
 
-#: src/shared/providers.js:55
-msgid "Watercolor"
+#: src/multi-feature/components/EditorFeatures.js:172
+msgid "Select a post or page to display its content when the feature is clicked."
 msgstr ""
 
-#: src/shared/providers.js:6
-msgid "Voyager"
+#: src/multi-feature/components/EditorFeatures.js:181
+msgid "Color"
 msgstr ""
 
-#: src/shared/providers.js:62
-msgid "Positron"
+#: src/multi-feature/components/EditorFeatures.js:182
+msgid "Choose the border and fill color for the feature."
+msgstr ""
+
+#: src/multi-feature/components/EditorFeatures.js:198
+msgid "Accept"
+msgstr ""
+
+#: src/multi-feature/components/EditorFeatures.js:52
+msgid "-- None --"
+msgstr ""
+
+#: src/multi-feature/components/EditorFeatures.js:57
+msgid "--- Pages ---"
+msgstr ""
+
+#: src/multi-feature/components/EditorFeatures.js:71
+msgid "--- Posts ---"
+msgstr ""
+
+#: src/multi-feature/components/ListFeatures.js:56
+msgid "Edit feature"
+msgstr ""
+
+#: src/multi-feature/components/ListFeatures.js:66
+msgid "Edit"
+msgstr ""
+
+#: src/multi-feature/components/ListFeatures.js:67
+msgid "Delete"
 msgstr ""

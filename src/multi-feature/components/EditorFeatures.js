@@ -148,6 +148,8 @@ const EditorFeatures = (props) => {
 									onChange={setLabel}
 									value={label}
 									help={__('This text will not be displayed on the web, it is to facilitate the identification of the feature.', 'map-block-leaflet')}
+                  __next40pxDefaultSize
+                  __nextHasNoMarginBottom
 								/>
 							</div>
 
@@ -157,6 +159,7 @@ const EditorFeatures = (props) => {
 									value={content}
 									onChange={setContent}
 									help={__('Paste GeoJSON content here (must be a valid GeoJSON object).', 'map-block-leaflet')}
+                  __nextHasNoMarginBottom
 								/>
 							</div>
 
@@ -168,6 +171,8 @@ const EditorFeatures = (props) => {
 									options={postOptions}
 									help={__('Select a post or page to display its content when the feature is clicked.', 'map-block-leaflet')}
 									disabled={loading}
+                  __next40pxDefaultSize
+                  __nextHasNoMarginBottom
 								/>
 							</div>
 
@@ -175,6 +180,7 @@ const EditorFeatures = (props) => {
 								<BaseControl
 									label={__('Color', 'map-block-leaflet')}
 									help={__('Choose the border and fill color for the feature.', 'map-block-leaflet')}
+                  __nextHasNoMarginBottom
 								>
 									<ColorPicker
 										color={color}
