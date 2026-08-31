@@ -3,68 +3,58 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/multi-feature/components/EditorFeatures.js:142
-msgid "Details"
+#: src/leaflet-map-block/components/Inspector.js:23
+msgid "Latitude"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:147
-msgid "Label"
+#: src/leaflet-map-block/components/Inspector.js:30
+msgid "Longitude"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:150
-msgid ""
-"This text will not be displayed on the web, it is to facilitate the "
-"identification of the feature."
+#: src/leaflet-map-block/components/Inspector.js:39
+msgid "Zoom"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:158
-msgid "Content"
+#: src/leaflet-map-block/components/Inspector.js:46
+msgid "Content of tooltip"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:161
-msgid "Paste GeoJSON content here (must be a valid GeoJSON object)."
+#: src/leaflet-map-block/components/Inspector.js:52
+msgid "Custom marker"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:168
-msgid "Linked Post/Page"
+#: src/leaflet-map-block/components/Inspector.js:59
+msgid "Marker size"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:172
-msgid "Select a post or page to display its content when the feature is clicked."
+#: src/leaflet-map-block/components/Inspector.js:68
+msgid "Options"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:181
-msgid "Color"
+#: src/leaflet-map-block/components/Inspector.js:70
+msgid "Map height"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:182
-msgid "Choose the border and fill color for the feature."
+#: src/leaflet-map-block/components/Inspector.js:80
+msgid "Disable scroll zoom"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:198
-msgid "Accept"
+#: src/multi-feature/components/Inspector.js:23
+msgid "Features"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:52
-msgid "-- None --"
+#: src/multi-marker/components/Inspector.js:22
+msgid "Markers"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:57
-msgid "--- Pages ---"
+#: src/shared/components/ThemeSettings.js:28
+msgid "Theme"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:71
-msgid "--- Posts ---"
+#: src/shared/components/ThemeSettings.js:34
+msgid "XYZ Tiles"
 msgstr ""
 
-#: src/multi-feature/components/ListFeatures.js:56
-msgid "Edit feature"
-msgstr ""
-
-#: src/multi-feature/components/ListFeatures.js:66
-msgid "Edit"
-msgstr ""
-
-#: src/multi-feature/components/ListFeatures.js:67
-msgid "Delete"
+#: src/shared/components/ThemeSettings.js:41
+msgid "Attribution"
 msgstr ""
