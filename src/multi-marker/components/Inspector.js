@@ -1,6 +1,6 @@
 import { __ } from "@wordpress/i18n";
 import { InspectorControls } from "@wordpress/block-editor";
-import { PanelBody } from "@wordpress/components";
+import { PanelBody, TextControl } from "@wordpress/components";
 
 import themes from '../../shared/themes';
 import providers from '../../shared/providers';
@@ -10,7 +10,7 @@ import ListMarkers from "./ListMarkers";
 
 const Inspector = (props) => {
     const { attributes, setAttributes } = props;
-    const { themeId } = attributes;
+    const { themeId, themeUrl, themeAttribution } = attributes;
 
     const setTheme = ({ id }) => {
         const themeSelected = providers.find(provider => provider.id === id);
@@ -21,6 +21,11 @@ const Inspector = (props) => {
                 themeAttribution: themeSelected.attribution,
             })
         }
+    }
+
+    const safeThemeUrl = (url) => {
+        const reqex = /{ext}|{ex}|{e}$/;
+        return url.replace(reqex, 'png');
     }
 
     const addMarker = (marker) => {
@@ -42,6 +47,20 @@ const Inspector = (props) => {
                     value={themeId}
                     themes={themes}
                     onChange={setTheme}
+                />
+                <label class="blocks-base-control__label" for="map-block-leaflet-text-control-xyz">{__('XYZ Tiles', 'map-block-leaflet')}</label>
+                <TextControl
+                    onChange={themeUrl => setAttributes({ themeId: '', themeUrl: safeThemeUrl(themeUrl) })}
+                    id="map-block-leaflet-text-control-xyz"
+                    type="text"
+                    value={themeUrl}
+                />
+                <label class="blocks-base-control__label" for="map-block-leaflet-text-control-attribution">{__('Attribution', 'map-block-leaflet')}</label>
+                <TextControl
+                    onChange={themeAttribution => setAttributes({ themeAttribution })}
+                    id="map-block-leaflet-text-control-attribution"
+                    type="text"
+                    value={themeAttribution}
                 />
             </PanelBody>
         </InspectorControls>
