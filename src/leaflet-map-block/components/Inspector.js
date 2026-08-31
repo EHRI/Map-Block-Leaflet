@@ -7,33 +7,15 @@ import {
     RangeControl,
     ToggleControl
 } from "@wordpress/components";
-import themes from '../../shared/themes';
-import providers from '../../shared/providers';
-import ThemePicker from '../../shared/components/ThemePicker';
+import ThemeSettings from '../../shared/components/ThemeSettings';
 import ImageUpload from '../../shared/components/ImageUpload';
 
 const Inspector = (props) => {
     const { attributes, setAttributes } = props;
     const {
-        lat, lng, height, content, zoom, themeId, disableScrollZoom, themeUrl, themeAttribution,
+        lat, lng, height, content, zoom, disableScrollZoom,
         markerImage, markerSize
     } = attributes;
-
-    const setTheme = ({ id }) => {
-        const themeSelected = providers.find(provider => provider.id === id);
-        if (themeSelected) {
-            setAttributes({
-                themeId: themeSelected.id,
-                themeUrl: themeSelected.url,
-                themeAttribution: themeSelected.attribution,
-            })
-        }
-    }
-
-    const safeThemeUrl = (url) => {
-        const reqex = /{ext}|{ex}|{e}$/;
-        return url.replace(reqex, 'png');
-    }
 
     return (
         <InspectorControls>
@@ -66,28 +48,7 @@ const Inspector = (props) => {
                     value={content}
                 />
             </PanelBody>
-            <PanelBody title={__('Theme', 'map-block-leaflet')} initialOpen={false}>
-
-                <ThemePicker
-                    value={themeId}
-                    themes={themes}
-                    onChange={setTheme}
-                />
-                <label class="blocks-base-control__label" for="map-block-leaflet-text-control-xyz">{__('XYZ Tiles', 'map-block-leaflet')}</label>
-                <TextControl
-                    onChange={themeUrl => setAttributes({ themeId: '', themeUrl: safeThemeUrl(themeUrl) })}
-                    id="map-block-leaflet-text-control-xyz"
-                    type="text"
-                    value={themeUrl}
-                />
-                <label class="blocks-base-control__label" for="map-block-leaflet-text-control-attribution">{__('Attribution', 'map-block-leaflet')}</label>
-                <TextControl
-                    onChange={themeAttribution => setAttributes({ themeAttribution })}
-                    id="map-block-leaflet-text-control-attribution"
-                    type="text"
-                    value={themeAttribution}
-                />
-            </PanelBody>
+            <ThemeSettings attributes={attributes} setAttributes={setAttributes} />
             <PanelBody title={__('Custom marker', 'map-block-leaflet')} initialOpen={false}>
                 <ImageUpload
                     image={markerImage}
