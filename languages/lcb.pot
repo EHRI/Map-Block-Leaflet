@@ -3,218 +3,58 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "X-Generator: babel-plugin-makepot\n"
 
-#: src/leaflet-map-block/components/Inspector.js:107
-msgid "Options"
-msgstr ""
-
-#: src/leaflet-map-block/components/Inspector.js:109
-msgid "Map height"
-msgstr ""
-
-#: src/leaflet-map-block/components/Inspector.js:119
-msgid "Disable scroll zoom"
-msgstr ""
-
-#: src/leaflet-map-block/components/Inspector.js:41
-#: src/multi-marker/components/EditorMarkers.js:85
+#: src/leaflet-map-block/components/Inspector.js:23
 msgid "Latitude"
 msgstr ""
 
-#: src/leaflet-map-block/components/Inspector.js:48
-#: src/multi-marker/components/EditorMarkers.js:92
+#: src/leaflet-map-block/components/Inspector.js:30
 msgid "Longitude"
 msgstr ""
 
-#: src/leaflet-map-block/components/Inspector.js:57
+#: src/leaflet-map-block/components/Inspector.js:39
 msgid "Zoom"
 msgstr ""
 
-#: src/leaflet-map-block/components/Inspector.js:64
+#: src/leaflet-map-block/components/Inspector.js:46
 msgid "Content of tooltip"
 msgstr ""
 
-#: src/leaflet-map-block/components/Inspector.js:69
-#: src/multi-feature/components/Inspector.js:46
-#: src/multi-marker/components/Inspector.js:45
-msgid "Theme"
-msgstr ""
-
-#: src/leaflet-map-block/components/Inspector.js:76
-#: src/multi-feature/components/Inspector.js:52
-#: src/multi-marker/components/Inspector.js:51
-msgid "XYZ Tiles"
-msgstr ""
-
-#: src/leaflet-map-block/components/Inspector.js:83
-#: src/multi-feature/components/Inspector.js:59
-#: src/multi-marker/components/Inspector.js:58
-msgid "Attribution"
-msgstr ""
-
-#: src/leaflet-map-block/components/Inspector.js:91
-#: src/multi-marker/components/EditorMarkers.js:108
+#: src/leaflet-map-block/components/Inspector.js:52
 msgid "Custom marker"
 msgstr ""
 
-#: src/leaflet-map-block/components/Inspector.js:98
-#: src/multi-marker/components/EditorMarkers.js:120
+#: src/leaflet-map-block/components/Inspector.js:59
 msgid "Marker size"
 msgstr ""
 
-#: src/multi-feature/components/AddFeature.js:30
-msgid "Add feature"
+#: src/leaflet-map-block/components/Inspector.js:68
+msgid "Options"
 msgstr ""
 
-#: src/multi-feature/components/AddFeature.js:34
-msgid "Add new feature"
+#: src/leaflet-map-block/components/Inspector.js:70
+msgid "Map height"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:142
-#: src/multi-marker/components/EditorMarkers.js:71
-msgid "Details"
+#: src/leaflet-map-block/components/Inspector.js:80
+msgid "Disable scroll zoom"
 msgstr ""
 
-#: src/multi-feature/components/EditorFeatures.js:147
-#: src/multi-marker/components/EditorMarkers.js:76
-msgid "Label"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:150
-msgid ""
-"This text will not be displayed on the web, it is to facilitate the "
-"identification of the feature."
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:158
-#: src/multi-marker/components/EditorMarkers.js:100
-msgid "Content"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:161
-msgid "Paste GeoJSON content here (must be a valid GeoJSON object)."
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:168
-msgid "Linked Post/Page"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:172
-msgid "Select a post or page to display its content when the feature is clicked."
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:181
-msgid "Color"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:182
-msgid "Choose the border and fill color for the feature."
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:198
-#: src/multi-marker/components/EditorMarkers.js:133
-msgid "Accept"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:52
-msgid "-- None --"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:57
-msgid "--- Pages ---"
-msgstr ""
-
-#: src/multi-feature/components/EditorFeatures.js:71
-msgid "--- Posts ---"
-msgstr ""
-
-#: src/multi-feature/components/Inspector.js:42
+#: src/multi-feature/components/Inspector.js:23
 msgid "Features"
 msgstr ""
 
-#: src/multi-feature/components/ListFeatures.js:56
-msgid "Edit feature"
-msgstr ""
-
-#: src/multi-feature/components/ListFeatures.js:66
-#: src/multi-marker/components/ListMarkers.js:74
-msgid "Edit"
-msgstr ""
-
-#: src/multi-feature/components/ListFeatures.js:67
-#: src/multi-marker/components/ListMarkers.js:75
-msgid "Delete"
-msgstr ""
-
-#: src/multi-marker/components/AddMarker.js:29
-msgid "Add marker"
-msgstr ""
-
-#: src/multi-marker/components/AddMarker.js:33
-msgid "Add new marker"
-msgstr ""
-
-#: src/multi-marker/components/EditorMarkers.js:103
-msgid "You can use html tags"
-msgstr ""
-
-#: src/multi-marker/components/EditorMarkers.js:79
-msgid ""
-"This text will not be displayed on the web, it is to facilitate the "
-"identification of the marker."
-msgstr ""
-
-#: src/multi-marker/components/Inspector.js:41
+#: src/multi-marker/components/Inspector.js:22
 msgid "Markers"
 msgstr ""
 
-#: src/multi-marker/components/ListMarkers.js:62
-msgid "Edit marker"
+#: src/shared/components/ThemeSettings.js:28
+msgid "Theme"
 msgstr ""
 
-#: src/shared/components/ImageUpload/ImageUpload.js:16
-msgid "Upload Image"
+#: src/shared/components/ThemeSettings.js:34
+msgid "XYZ Tiles"
 msgstr ""
 
-#: src/shared/components/Search/index.js:56
-msgid "Search for a location"
-msgstr ""
-
-#: src/shared/components/Search/index.js:62
-msgid "No matches found"
-msgstr ""
-
-#: src/shared/providers.js:13
-msgid "WorldImagery"
-msgstr ""
-
-#: src/shared/providers.js:20
-msgid "Black And White"
-msgstr ""
-
-#: src/shared/providers.js:27
-msgid "Grayscale"
-msgstr ""
-
-#: src/shared/providers.js:34
-msgid "Dark Matter"
-msgstr ""
-
-#: src/shared/providers.js:41
-msgid "Mapnik"
-msgstr ""
-
-#: src/shared/providers.js:48
-msgid "Stadia OSMBright"
-msgstr ""
-
-#: src/shared/providers.js:55
-msgid "Watercolor"
-msgstr ""
-
-#: src/shared/providers.js:6
-msgid "Voyager"
-msgstr ""
-
-#: src/shared/providers.js:62
-msgid "Positron"
+#: src/shared/components/ThemeSettings.js:41
+msgid "Attribution"
 msgstr ""
